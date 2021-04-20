@@ -40,7 +40,7 @@ namespace W3S2PCSC
                 fileName = Path.GetFileName(path);
             }
             button1.Enabled = true;
-            
+            label1.Text = "Source file: OK";
         }
 
         private void FileProcessing()
@@ -73,7 +73,9 @@ namespace W3S2PCSC
             File.Copy(path, @".\pc_save\" + fileName,true);
             File.Delete(path);
             MessageBox.Show("Done");
-            
+            label2.Text = "Correct file: Done";
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
